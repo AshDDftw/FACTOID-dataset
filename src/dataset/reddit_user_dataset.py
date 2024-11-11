@@ -308,6 +308,7 @@ class RedditUserDataset(object):
                 continue
             print('Reading file ' + emb_file_name)
             user_emb_file = os.path.join(doc_file_path, emb_file_name)
+            print(user_emb_file)
             emb_dict = get_embeddings_dict_from_path(user_emb_file)
             for user_id in emb_dict.keys():
                 path_dict[user_id] = emb_file_name
